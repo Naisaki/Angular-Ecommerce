@@ -11,14 +11,15 @@ export const routes: Routes = [
       ),
   },
 
-  // Catálogo
+  // Catalog
   {
     path: 'catalog',
-    loadComponent: () =>
-      import(
-        '@features/catalog/pages/catalog-page/catalog-page'
-      ).then((m) => m.CatalogPage),
+    loadChildren: () =>
+      import('@features/catalog/catalog.routes').then(
+        (m) => m.CATALOG_ROUTES
+      ),
   },
+
   {
     path: 'product/:id',
     loadComponent: () =>
