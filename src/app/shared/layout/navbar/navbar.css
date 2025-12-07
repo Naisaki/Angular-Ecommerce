@@ -8,9 +8,6 @@ svg {
 .navbar__start {
     @apply inline-flex items-center px-4 py-1 pb-3 gap-4 h-min w-min;
 }
-.navbar__end {
-    @apply inline-flex items-center px-4 py-[7px] pb-3;
-}
 .navbar__logo {
     @apply inline-flex items-center gap-1.5 cursor-pointer;
     .navbar__logo__icon {
@@ -71,5 +68,23 @@ svg {
         &.active {
             @apply left-2.5;
         }
+    }
+}
+.navbar__end {
+    @apply inline-flex items-center gap-3 px-4 py-[7px] pb-3;
+}
+.navbar__end__search {
+    @apply inline-flex items-center cursor-pointer;
+    span {
+        @apply w-[0.875rem] h-[0.875rem] text-[var(--color-text)];
+    }
+}
+.navbar__end__cart {
+    @apply inline-flex items-center w-min h-min gap-1 cursor-pointer;
+    span {
+        @apply w-4 h-4 text-[var(--color-text)] fill-[var(--color-text)];
+    }
+    .navbar__end__cart__count {
+        @apply relative inline-flex items-center justify-center w-min h-min text-[0.875rem] text-nowrap text-[var(--color-text)];
     }
 }

@@ -6,6 +6,7 @@
     --font-family: 'DM Sans', sans-serif;
     --font-size: 1rem;
     --font-weight: 400;
+    --letter-spacing: 0em;
     --font-style: normal;
     --font-optical-sizing: auto;
     --line-height: 120%;
@@ -23,6 +24,7 @@
     font-style: var(--font-style);
     font-optical-sizing: var(--font-optical-sizing);
     line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
 }
 
 .dark {
