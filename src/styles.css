@@ -1,3 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import "tailwindcss";
+:root {
+    --font-family: 'DM Sans', sans-serif;
+    --font-size: 1rem;
+    --font-weight: 400;
+    --font-style: normal;
+    --font-optical-sizing: auto;
+}
+
+* {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    font-style: var(--font-style);
+    font-optical-sizing: var(--font-optical-sizing);
+}
+
+body {
+    @apply p-3;
+}
