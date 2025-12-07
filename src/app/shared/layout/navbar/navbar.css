@@ -1,4 +1,7 @@
 @reference "tailwindcss";
+svg {
+    @apply block w-full h-auto text-[inherit];
+}
 .navbar {
     @apply inline-flex justify-between items-center w-full;
 }
@@ -9,17 +12,61 @@
     @apply inline-flex items-center px-4 py-[7px] pb-3;
 }
 .navbar__logo {
+    @apply inline-flex items-center gap-1.5 cursor-pointer;
     .navbar__logo__icon {
+        @apply flex items-center w-4 h-4 text-white;
+
+        .navbar__logo__icon--stroke  {
+            @apply text-black stroke-1;
+        }
         
     }
-    .navbar__logo__text {
-        @apply text-[0.875rem];
-        
+    .navbar__logo__label {
+        @apply relative flex flex-col items-start h-[1.125rem] overflow-hidden;
+        span {
+            @apply relative text-[0.9375rem] font-medium -top-full transition-all duration-[250ms] ease-in-out;
+        }
+    }
+    &:hover {
+        .navbar__logo__label span {
+            @apply top-0;
+        }
     }
 }
 .navbar__links {
     @apply inline-flex items-center gap-4;
-    a {
-        @apply text-[0.875rem] text-nowrap
+    .navbar__links__item {
+        @apply inline-flex items-center gap-1 w-min h-min;
+        .navbar__links__text {
+            @apply relative flex flex-col w-min h-[1.0625rem] overflow-hidden;
+            span {
+                @apply relative text-[0.875rem] text-nowrap -top-full transition-all duration-[250ms] ease-in-out;
+            }
+        }
+
+        > span {
+            @apply inline-flex w-3 h-3 text-[#0e1011] rotate-0 transition-transform duration-[250ms] ease-in-out;
+
+            svg {
+                @apply select-none fill-[#0e1011];
+            }
+        }
+
+        &:hover {
+            .navbar__links__text span {
+                @apply top-0;
+            }
+            > span {
+                @apply rotate-45;
+            }
+        }
+    }
+}
+
+.navbar__toggle {
+    @apply inline-flex items-center w-[1.875rem] h-min p-1.5 bg-[#ececec] rounded-full;
+
+    .navbar__toggle__circle{
+        @apply w-2 h-2 rounded-full bg-[#0e1011] translate-x-0 transition-transform duration-[250ms] ease-in-out;
     }
 }
