@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
 :root {
     --font-family: 'DM Sans', sans-serif;
     --font-size: 1rem;
@@ -15,6 +16,9 @@
     --background-color-logo: #fff;
     --stroke-color-logo: #0e1011;
     --background-color: #fff;
+    --background-color-announcement-bar: #0e1011;
+    --color-text-announcement-bar: #fff;
+    --mask-image-announcement-bar: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
 }
 
 * {
@@ -34,8 +38,23 @@
     --background-color-logo: #0e1011;
     --stroke-color-logo: #fff;
     --background-color: #0e1011;
+    --background-color-announcement-bar: #fff;
+    --color-text-announcement-bar: #0e1011;
 }
 
 body {
     @apply p-3;
+}
+
+svg {
+    @apply block w-full h-auto text-inherit;
+}
+
+@keyframes announcement-marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }

@@ -1,7 +1,4 @@
 @reference "tailwindcss";
-svg {
-    @apply block w-full h-auto text-inherit;
-}
 .navbar {
     @apply inline-flex justify-between items-center w-full;
 }
