@@ -1,6 +1,6 @@
 @reference "tailwindcss";
 svg {
-    @apply block w-full h-auto text-[inherit];
+    @apply block w-full h-auto text-inherit;
 }
 .navbar {
     @apply inline-flex justify-between items-center w-full;
@@ -14,17 +14,17 @@ svg {
 .navbar__logo {
     @apply inline-flex items-center gap-1.5 cursor-pointer;
     .navbar__logo__icon {
-        @apply flex items-center w-4 h-4 text-white;
+        @apply flex items-center w-4 h-4 text-[var(--background-color-logo)];
 
         .navbar__logo__icon--stroke  {
-            @apply text-black stroke-1;
+            @apply text-[var(--stroke-color-logo)] stroke-1;
         }
         
     }
     .navbar__logo__label {
         @apply relative flex flex-col items-start h-[1.125rem] overflow-hidden;
         span {
-            @apply relative text-[0.9375rem] font-medium -top-full transition-all duration-[250ms] ease-in-out;
+            @apply relative text-[0.9375rem] text-[var(--color-text)] font-medium -top-full transition-all duration-[250ms] ease-in-out;
         }
     }
     &:hover {
@@ -40,15 +40,15 @@ svg {
         .navbar__links__text {
             @apply relative flex flex-col w-min h-[1.0625rem] overflow-hidden;
             span {
-                @apply relative text-[0.875rem] text-nowrap -top-full transition-all duration-[250ms] ease-in-out;
+                @apply relative text-[0.875rem] text-[var(--color-text)] text-nowrap -top-full transition-all duration-[250ms] ease-in-out;
             }
         }
 
         > span {
-            @apply inline-flex w-3 h-3 text-[#0e1011] rotate-0 transition-transform duration-[250ms] ease-in-out;
+            @apply inline-flex w-3 h-3 text-[var(--color-text)] rotate-0 transition-transform duration-[250ms] ease-in-out;
 
             svg {
-                @apply select-none fill-[#0e1011];
+                @apply select-none fill-[var(--color-text)];
             }
         }
 
@@ -64,9 +64,12 @@ svg {
 }
 
 .navbar__toggle {
-    @apply inline-flex items-center w-[1.875rem] h-min p-1.5 bg-[#ececec] rounded-full;
+    @apply relative inline-flex items-center w-[1.875rem] h-min p-1.5 bg-[var(--background-color-toggle)] rounded-full;
 
     .navbar__toggle__circle{
-        @apply w-2 h-2 rounded-full bg-[#0e1011] translate-x-0 transition-transform duration-[250ms] ease-in-out;
+        @apply relative w-2 h-2 rounded-full bg-[var(--color-text)] left-0 transition-all duration-[250ms] ease-in-out;
+        &.active {
+            @apply left-2.5;
+        }
     }
 }

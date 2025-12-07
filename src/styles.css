@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 :root {
     --font-family: 'DM Sans', sans-serif;
     --font-size: 1rem;
@@ -8,6 +9,11 @@
     --font-style: normal;
     --font-optical-sizing: auto;
     --line-height: 120%;
+    --color-text: #0e1011;
+    --background-color-toggle: #ececec;
+    --background-color-logo: #fff;
+    --stroke-color-logo: #0e1011;
+    --background-color: #fff;
 }
 
 * {
@@ -17,6 +23,15 @@
     font-style: var(--font-style);
     font-optical-sizing: var(--font-optical-sizing);
     line-height: var(--line-height);
+}
+
+.dark {
+    @apply bg-[var(--background-color)];
+    --color-text: #fff;
+    --background-color-toggle: #202324;
+    --background-color-logo: #0e1011;
+    --stroke-color-logo: #fff;
+    --background-color: #0e1011;
 }
 
 body {
