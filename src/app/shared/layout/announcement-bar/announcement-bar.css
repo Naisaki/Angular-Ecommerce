@@ -1,0 +1,17 @@
+@reference "tailwindcss";
+
+.announcement-bar {
+  @apply relative inline-flex items-center justify-center w-full h-min px-6 py-2.5 rounded-xl bg-[var(--background-color-announcement-bar)];
+}
+
+.announcement-bar__marquee {
+  @apply relative inline-flex items-center justify-start gap-2 max-w-[37.5rem] h-[1.0625rem] overflow-hidden mask-[var(--mask-image-announcement-bar)];
+
+  .announcement-bar__marquee__list {
+    @apply relative inline-flex items-center justify-start gap-2 w-min h-full;
+  }
+
+  .announcement-bar__marquee__list li {
+    @apply text-[0.9375rem] text-nowrap text-[var(--color-text-announcement-bar)];
+  }
+}
