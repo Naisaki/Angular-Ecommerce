@@ -49,12 +49,3 @@ body {
 svg {
     @apply block w-full h-auto text-inherit;
 }
-
-@keyframes announcement-marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}

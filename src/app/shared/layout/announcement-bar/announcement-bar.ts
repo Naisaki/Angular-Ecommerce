@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
+import { AfterViewInit, OnDestroy, ElementRef, ViewChild, inject, PLATFORM_ID, Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-announcement-bar',
@@ -18,8 +19,11 @@ export class AnnouncementBar implements AfterViewInit, OnDestroy {
   private readonly slowSpeed = 20; // hover
   private currentSpeed = this.normalSpeed;
 
+  private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+
   ngAfterViewInit(): void {
-    this.startAnimation();
+    if (!this.isBrowser) return;   // ⬅ evita correr en SSR
+  this.startAnimation();
   }
 
   ngOnDestroy(): void {
@@ -37,6 +41,8 @@ export class AnnouncementBar implements AfterViewInit, OnDestroy {
   }
 
   private startAnimation(): void {
+    if (!this.isBrowser) return;
+
     const step = (timestamp: number) => {
       if (!this.lastTimestamp) {
         this.lastTimestamp = timestamp;
@@ -58,15 +64,15 @@ export class AnnouncementBar implements AfterViewInit, OnDestroy {
 
       listEl.style.transform = `translateX(${this.offset}px)`;
 
-      this.animationFrameId = requestAnimationFrame(step);
+      this.animationFrameId = window.requestAnimationFrame(step);
     };
 
-    this.animationFrameId = requestAnimationFrame(step);
+    this.animationFrameId = window.requestAnimationFrame(step);
   }
 
   private stopAnimation(): void {
     if (this.animationFrameId !== null) {
-      cancelAnimationFrame(this.animationFrameId);
+      window.cancelAnimationFrame(this.animationFrameId);
       this.animationFrameId = null;
     }
   }
