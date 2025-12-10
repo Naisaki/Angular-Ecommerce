@@ -1,0 +1,21 @@
+@reference "tailwindcss";
+
+.features-bar {
+    @apply flex flex-row w-full h-min items-center justify-center py-6 px-12 gap-16 rounded-xl bg-(--background-color-feature-bar);
+}
+
+.feature-bar__item {
+    @apply flex flex-row items-center gap-2 w-min h-min rounded-lg;
+}
+
+.feature-bar__item-icon {
+    @apply w-5 h-5 grid place-items-center;
+}
+
+.feature-bar__item-icon-svg {
+    @apply w-full h-full text-(--color-text-feature-bar-icon) fill-(--color-text-feature-bar-icon);
+}
+
+.feature-bar__item-label {
+    @apply text-[0.9375rem] text-(--color-text-feature-bar-icon) text-nowrap;
+}

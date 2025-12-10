@@ -1,0 +1,17 @@
+<div class="features-bar">
+    <div
+        *ngFor="let feature of features"
+        class="feature-bar__item"
+    >
+        <span class="feature-bar__item-icon">
+            <!-- Ejemplo usando icon font; cambia por tu sistema de iconos -->
+            <svg class="feature-bar__item-icon-svg">
+                <use [attr.xlink:href]="feature.icon"></use>
+            </svg>
+            <!-- <span class="material-symbols-outlined text-xs">
+                {{ feature.icon }}
+            </span> -->
+        </span>
+        <span class="feature-bar__item-label">{{ feature.label }}</span>
+    </div>
+</div>

@@ -27,6 +27,8 @@
     --background-color-hero-dot: #fff;
     --background-color-inverted-border: radial-gradient(circle 18px at bottom right, #0000 98%, #fff) bottom right;
     --background-color-inverted-border: radial-gradient(circle at 100% 100%, #0000 18px, transparent 18px);
+    --background-color-feature-bar: #0e1011;
+    --color-text-feature-bar-icon: #fff;
 }
 
 * {
@@ -51,6 +53,8 @@
     --background-color-card-hero: #0e1011;
     --color-text-card-hero-title: #fff;
     --color-text-card-hero-description: #9f9fa0;
+    --background-color-feature-bar: #fff;
+    --color-text-feature-bar-icon: #0e1011;
 }
 
 body {
