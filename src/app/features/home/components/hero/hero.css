@@ -1,0 +1,84 @@
+@reference "tailwindcss";
+
+:host {
+  @apply relative h-full w-full;
+}
+
+.hero {
+    @apply relative h-full w-full rounded-[12px] overflow-hidden;
+}
+
+.hero__container {
+    @apply relative h-full w-full;
+}
+
+.hero__slider {
+    @apply relative h-full w-full;
+}
+
+.hero__slider-btn {
+    @apply absolute grid place-items-center w-10 h-10 z-10 bg-(--background-color-card-hero-btn) rounded-md cursor-pointer;
+    &.hero__slider-btn--prev {
+        @apply top-1/2 left-10 translate-y-[-50%];
+    }
+    &.hero__slider-btn--next {
+        @apply top-1/2 right-10 translate-y-[-50%];
+    }
+    .hero__slider-btn-icon {
+        @apply grid place-items-center w-5 h-5;
+        svg {
+            @apply w-full h-full text-white;
+        }
+    }
+}
+
+.hero__slider-viewport {
+    @apply absolute inset-0;
+}
+
+.hero__slider-track {
+    @apply flex flex-row w-full h-full max-w-full max-h-full transition-transform duration-500 ease-in-out;
+}
+
+.hero__slide {
+    @apply relative grow shrink-0 basis-full max-w-full h-full max-h-full;
+}
+
+.hero__image {
+    @apply w-full h-full object-cover;
+}
+
+.hero__slide__content {
+    @apply absolute flex flex-col items-start left-12 bottom-10 w-full max-w-[400px] h-min p-10 gap-8 rounded-[10px] bg-(--background-color-card-hero) z-10;
+}
+
+.hero__slide__content-text {
+    @apply flex flex-col gap-2 h-min w-full;
+}
+
+.hero__slide__content-title {
+    @apply text-[2rem] text-(--color-text-card-hero-title) text-balance;
+}
+
+.hero__slide__content-description {
+    @apply text-[1rem] text-(--color-text-card-hero-description) leading-[160%] text-balance;
+}
+
+.btn--link {
+    @apply text-(--color-text) text-[0.875rem] border-b border-(--color-text) leading-[100%];
+}
+
+
+
+.hero__dots {
+    @apply absolute flex p-2.5 gap-2.5 items-center justify-center rounded-[50px] bottom-[30px] left-1/2 translate-x-[-50%] bg-(--background-color-hero-dots);
+}
+
+.hero__dot {
+    @apply w-2.5 h-2.5 rounded-full border-none bg-(--background-color-hero-dot) p-0 cursor-pointer transition-all duration-150 ease-in-out opacity-50;
+}
+
+.hero__dot--active {
+    @apply opacity-100;
+}
+

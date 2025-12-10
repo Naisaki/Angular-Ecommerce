@@ -19,6 +19,14 @@
     --background-color-announcement-bar: #0e1011;
     --color-text-announcement-bar: #fff;
     --mask-image-announcement-bar: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+    --background-color-card-hero: #fff;
+    --color-text-card-hero-title: #0e1011;
+    --color-text-card-hero-description: #0e101199;
+    --background-color-card-hero-btn: #0e101133;
+    --background-color-hero-dots: #0e101133;
+    --background-color-hero-dot: #fff;
+    --background-color-inverted-border: radial-gradient(circle 18px at bottom right, #0000 98%, #fff) bottom right;
+    --background-color-inverted-border: radial-gradient(circle at 100% 100%, #0000 18px, transparent 18px);
 }
 
 * {
@@ -32,7 +40,7 @@
 }
 
 .dark {
-    @apply bg-[var(--background-color)];
+    @apply bg-(--background-color);
     --color-text: #fff;
     --background-color-toggle: #202324;
     --background-color-logo: #0e1011;
@@ -40,6 +48,9 @@
     --background-color: #0e1011;
     --background-color-announcement-bar: #fff;
     --color-text-announcement-bar: #0e1011;
+    --background-color-card-hero: #0e1011;
+    --color-text-card-hero-title: #fff;
+    --color-text-card-hero-description: #9f9fa0;
 }
 
 body {

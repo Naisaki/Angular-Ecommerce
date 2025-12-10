@@ -1,1 +1,72 @@
-<p>hero works!</p>
+<ng-content></ng-content>
+<section class="hero">
+    <div class="hero__container">
+        <!-- <div class="hero__image">
+            <img src="hero-image-1.avif" alt="">
+        </div> -->
+
+        <div class="hero__slider">
+            <!-- Botón anterior -->
+            <button
+                type="button"
+                class="hero__slider-btn hero__slider-btn--prev"
+                (click)="prevSlide()"
+                aria-label="Previous slide"
+            >
+                <span class="hero__slider-btn-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title xmlns="">arrow-back-ios-new</title><path fill="currentColor" d="M16 22L6 12L16 2l1.775 1.775L9.55 12l8.225 8.225z"/></svg>
+                </span>
+            </button>
+
+            <!-- Viewport -->
+            <div class="hero__slider-viewport">
+                <!-- Track que se mueve -->
+                <ul
+                    #sliderTrack
+                    class="hero__slider-track"
+                >
+                    <li
+                        class="hero__slide"
+                        *ngFor="let slide of extendedSlides"
+                    >
+                        <img
+                            [src]="slide.src"
+                            [alt]="slide.alt"
+                            class="hero__image"
+                        />
+                        <div class="hero__slide__content">
+                            <div class="hero__slide__content-text">
+                                <h2 class="hero__slide__content-title">{{slide.title}}</h2>
+                                <p class="hero__slide__content-description">{{slide.description}}</p>
+                            </div>
+                            <button class="btn btn--link">View Product</button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hero__dots">
+                    <button
+                        *ngFor="let slide of slides; let i = index"
+                        type="button"
+                        class="hero__dot"
+                        [class.hero__dot--active]="i === currentSlideIndex"
+                        (click)="goToSlide(i)"
+                        aria-label="Go to slide {{ i + 1 }}"
+                    ></button>
+                </div>
+            </div>
+
+            <!-- Botón siguiente -->
+            <button
+                type="button"
+                class="hero__slider-btn hero__slider-btn--next"
+                (click)="nextSlide()"
+                aria-label="Next slide"
+            >
+                <span class="hero__slider-btn-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title xmlns="">arrow-forward-ios</title><path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z"/></svg>
+                </span>
+            </button>
+        </div>
+
+    </div>
+</section>

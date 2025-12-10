@@ -1,24 +1,30 @@
 @reference "tailwindcss";
 .navbar {
-    @apply inline-flex justify-between items-center w-full;
+    @apply absolute top-0 left-0 right-0 inline-flex justify-between items-center z-100;
+
 }
 .navbar__start {
-    @apply inline-flex items-center px-4 py-1 pb-3 gap-4 h-min w-min;
+    @apply relative inline-flex items-center px-4 py-1 pb-3 gap-4 rounded-br-[20px] h-min w-min bg-(--background-color);
+    &::before {
+        @apply content-[""] absolute left-0 bottom-0 transform translate-y-full w-6 h-6 bg-transparent rounded-tl-[18px] shadow-[-8px_-8px_0_0_var(--background-color)] pointer-events-none;
+    }
+
+    &::after {
+        @apply content-[""] absolute right-0 top-0 transform translate-x-full w-6 h-6 bg-transparent rounded-tl-[18px] shadow-[-8px_-8px_0_0_var(--background-color)] pointer-events-none;
+    }
 }
 .navbar__logo {
     @apply inline-flex items-center gap-1.5 cursor-pointer;
     .navbar__logo__icon {
-        @apply flex items-center w-4 h-4 text-[var(--background-color-logo)];
-
+        @apply flex items-center w-4 h-4 text-(--background-color-logo);
         .navbar__logo__icon--stroke  {
-            @apply text-[var(--stroke-color-logo)] stroke-1;
+            @apply text-(--stroke-color-logo) stroke-1;
         }
-        
     }
     .navbar__logo__label {
         @apply relative flex flex-col items-start h-[1.125rem] overflow-hidden;
         span {
-            @apply relative text-[0.9375rem] text-[var(--color-text)] font-medium -top-full transition-all duration-[250ms] ease-in-out;
+            @apply relative text-[0.9375rem] text-(--color-text) font-medium -top-full transition-all duration-250 ease-in-out;
         }
     }
     &:hover {
@@ -28,24 +34,23 @@
     }
 }
 .navbar__links {
-    @apply inline-flex items-center gap-4;
+    @apply inline-flex items-center gap-4.5;
     .navbar__links__item {
         @apply inline-flex items-center gap-1 w-min h-min;
         .navbar__links__text {
             @apply relative flex flex-col w-min h-[1.0625rem] overflow-hidden;
             span {
-                @apply relative text-[0.875rem] text-[var(--color-text)] text-nowrap -top-full transition-all duration-[250ms] ease-in-out;
+                @apply relative text-[0.875rem] text-(--color-text) text-nowrap -top-full transition-all duration-250 ease-in-out;
             }
         }
 
         > span {
-            @apply inline-flex w-3 h-3 text-[var(--color-text)] rotate-0 transition-transform duration-[250ms] ease-in-out;
+            @apply inline-flex w-3 h-3 text-(--color-text) rotate-0 transition-transform duration-250 ease-in-out;
 
             svg {
-                @apply select-none fill-[var(--color-text)];
+                @apply select-none fill-(--color-text);
             }
         }
-
         &:hover {
             .navbar__links__text span {
                 @apply top-0;
@@ -58,30 +63,36 @@
 }
 
 .navbar__toggle {
-    @apply relative inline-flex items-center w-[1.875rem] h-min p-1.5 bg-[var(--background-color-toggle)] rounded-full;
-
+    @apply relative inline-flex items-center w-[1.875rem] h-min p-1.5 bg-(--background-color-toggle) rounded-full;
     .navbar__toggle__circle{
-        @apply relative w-2 h-2 rounded-full bg-[var(--color-text)] left-0 transition-all duration-[250ms] ease-in-out;
+        @apply relative w-2 h-2 rounded-full bg-(--color-text) left-0 transition-all duration-250 ease-in-out;
         &.active {
             @apply left-2.5;
         }
     }
 }
 .navbar__end {
-    @apply inline-flex items-center gap-3 px-4 py-[7px] pb-3;
+    @apply relative inline-flex items-center gap-3 rounded-bl-[20px] px-4 py-[7px] pb-3 bg-(--background-color);
+    &::before {
+        @apply content-[""] absolute left-0 top-0 transform -translate-x-full w-6 h-6 bg-transparent rounded-tr-[18px] shadow-[8px_-8px_0_0_var(--background-color)] pointer-events-none;
+    }
+
+    &::after {
+        @apply content-[""] absolute right-0 bottom-0 transform translate-y-full w-6 h-6 bg-transparent rounded-tr-[18px] shadow-[8px_-8px_0_0_var(--background-color)] pointer-events-none;
+    }
 }
 .navbar__end__search {
     @apply inline-flex items-center cursor-pointer;
     span {
-        @apply w-[0.875rem] h-[0.875rem] text-[var(--color-text)];
+        @apply w-[0.875rem] h-[0.875rem] text-(--color-text);
     }
 }
 .navbar__end__cart {
     @apply inline-flex items-center w-min h-min gap-1 cursor-pointer;
     span {
-        @apply w-4 h-4 text-[var(--color-text)] fill-[var(--color-text)];
+        @apply w-4 h-4 text-(--color-text) fill-(--color-text);
     }
     .navbar__end__cart__count {
-        @apply relative inline-flex items-center justify-center w-min h-min text-[0.875rem] text-nowrap text-[var(--color-text)];
+        @apply relative inline-flex items-center justify-center w-min h-min text-[0.875rem] text-nowrap text-(--color-text);
     }
 }
