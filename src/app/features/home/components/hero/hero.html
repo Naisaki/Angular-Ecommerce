@@ -25,33 +25,35 @@
                     #sliderTrack
                     class="hero__slider-track"
                 >
-                    <li
-                        class="hero__slide"
-                        *ngFor="let slide of extendedSlides"
-                    >
-                        <img
-                            [src]="slide.src"
-                            [alt]="slide.alt"
-                            class="hero__image"
-                        />
-                        <div class="hero__slide__content">
-                            <div class="hero__slide__content-text">
-                                <h2 class="hero__slide__content-title">{{slide.title}}</h2>
-                                <p class="hero__slide__content-description">{{slide.description}}</p>
+                    @for(slide of extendedSlides; track $index){
+                        <li
+                            class="hero__slide"
+                        >
+                            <img
+                                [src]="slide.src"
+                                [alt]="slide.alt"
+                                class="hero__image"
+                            />
+                            <div class="hero__slide__content">
+                                <div class="hero__slide__content-text">
+                                    <h2 class="hero__slide__content-title">{{slide.title}}</h2>
+                                    <p class="hero__slide__content-description">{{slide.description}}</p>
+                                </div>
+                                <button class="btn btn--link">View Product</button>
                             </div>
-                            <button class="btn btn--link">View Product</button>
-                        </div>
-                    </li>
+                        </li>    
+                    }
                 </ul>
                 <div class="hero__dots">
-                    <button
-                        *ngFor="let slide of slides; let i = index"
-                        type="button"
-                        class="hero__dot"
-                        [class.hero__dot--active]="i === currentSlideIndex"
-                        (click)="goToSlide(i)"
-                        aria-label="Go to slide {{ i + 1 }}"
-                    ></button>
+                    @for(slide of slides; track $index){
+                        <button
+                            type="button"
+                            class="hero__dot"
+                            [class.hero__dot--active]="$index === currentSlideIndex"
+                            (click)="goToSlide($index)"
+                            aria-label="Go to slide {{ $index + 1 }}"
+                        ></button>
+                    }
                 </div>
             </div>
 

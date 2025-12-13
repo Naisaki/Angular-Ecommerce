@@ -1,9 +1,14 @@
-<section class="home">
+<section class="home__hero">
     <app-announcement-bar></app-announcement-bar>
     <app-hero>
         <app-navbar></app-navbar>
     </app-hero>
 </section>
-<section class="features">
-    <app-features-bar></app-features-bar>
-</section>
+<div class="home__sections">
+    <section class="features">
+        <app-features-bar></app-features-bar>
+    </section>
+    <section class="favourites">
+        <app-our-favourites [products]="favourites"></app-our-favourites>
+    </section>
+</div>

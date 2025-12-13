@@ -29,6 +29,8 @@
     --background-color-inverted-border: radial-gradient(circle at 100% 100%, #0000 18px, transparent 18px);
     --background-color-feature-bar: #0e1011;
     --color-text-feature-bar-icon: #fff;
+    --background-color-our-favourites: #f6f6f6;
+    --color-text-card-product-discount: #0e101199;
 }
 
 * {
@@ -55,6 +57,7 @@
     --color-text-card-hero-description: #9f9fa0;
     --background-color-feature-bar: #fff;
     --color-text-feature-bar-icon: #0e1011;
+    --background-color-our-favourites: #181b1c;
 }
 
 body {

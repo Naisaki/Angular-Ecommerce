@@ -1,0 +1,73 @@
+@reference "tailwindcss";
+
+/* :host {
+    @apply grow shrink-0 basis-[calc(25%-9px)] h-auto max-w-[calc(25%-9px)];
+} */
+
+.product-card {
+    @apply relative flex flex-col h-full w-full gap-3 bg-transparent rounded-xl overflow-hidden;
+    &:hover {
+        .product-card__icon {
+            @apply pl-1.5 w-5;
+        }
+        .product-card__image-wrapper {
+            @apply blur;
+        }
+        .product-card__footer {
+            @apply bottom-3;
+        }
+        .product-card__image-background {
+            @apply opacity-100;
+        }
+        .product-card__cta {
+            @apply border-b-2;
+        }
+    }
+}
+
+.product-card__image-wrapper {
+    @apply relative h-full w-full transition-[filter] duration-300 ease-in-out;
+    .product-card__image-background {
+        @apply absolute opacity-0 inset-0 bg-repeat bg-top-left bg-size-[64px_auto] bg-[url('/assets/bg-image-card.svg')] transition-opacity duration-300 ease-in-out; 
+    }
+    
+    .product-card__image {
+        @apply w-full h-full object-cover;
+    }
+}
+
+.product-card__content {
+    @apply absolute inset-0 flex flex-col h-full w-full;
+    .product-card__title {
+        @apply absolute flex flex-row items-center p-[8px_16px_12px] w-min text-nowrap text-[0.9375rem] text-(--color-text) bg-(--background-color) rounded-br-[18px];
+
+        &::before {
+            @apply content-[""] absolute left-0 bottom-0 transform translate-y-full w-6 h-6 bg-transparent rounded-tl-[18px] shadow-[-8px_-8px_0_0_var(--background-color)] pointer-events-none;
+        }
+
+        &::after {
+            @apply content-[""] absolute right-0 top-0 transform translate-x-full w-6 h-6 bg-transparent rounded-tl-[18px] shadow-[-8px_-8px_0_0_var(--background-color)] pointer-events-none;
+        }
+    }
+
+    .product-card__footer {
+        @apply absolute flex flex-row h-min -bottom-20 rounded-lg bg-(--background-color) p-5 left-3 right-3 gap-8 transition-[bottom] duration-300 ease-in-out;
+
+        .product-card__price {
+            @apply flex flex-row grow shrink-0 basis-0 w-px h-min gap-2 items-center text-[0.9375rem] text-(--color-text) text-nowrap;
+        }
+
+        .product-card__price--old {
+            @apply text-[0.9375rem] text-(--color-text-card-product-discount) line-through decoration-1 decoration-solid decoration-(--color-text-card-product-discount) text-nowrap;
+        }
+    }
+}
+
+.product-card__icon {
+    @apply w-0 h-3.5 text-(--color-text) transition-all duration-300 ease-in-out;
+}
+
+.product-card__cta {
+    @apply text-(--color-text) text-[0.875rem] border-b-4 border-(--color-text) leading-[100%] transition-[border] duration-600 ease-in-out;
+}
+

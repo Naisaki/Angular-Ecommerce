@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 interface Feature {
   icon: string;   // luego lo puedes cambiar a SVG, lucide, etc.
   label: string;
 }
 @Component({
   selector: 'app-features-bar',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './features-bar.html',
   styleUrl: './features-bar.css',
 })

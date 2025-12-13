@@ -1,0 +1,41 @@
+@reference "tailwindcss";
+
+.our-favourites {
+    @apply relative flex flex-col w-full h-min items-center p-0 gap-3 overflow-hidden;
+}
+
+.our-favourites__header {
+    @apply relative flex items-center justify-center w-full h-15.5 rounded-xl bg-(--background-color-our-favourites);
+}
+
+.our-favourites__title {
+    @apply text-[1rem] text-(--color-text);
+}
+
+.our-favourites__slider {
+    @apply relative flex flex-row h-min w-full gap-0;
+}
+
+.our-favourites__products-track {
+    @apply relative flex flex-row h-min w-full gap-3;
+}
+
+.our-favourites__products-item {
+    @apply grow shrink-0 basis-[calc(25%-9px)] h-auto max-w-[calc(25%-9px)];
+}
+
+.our-favourites__slider-btn {
+    @apply absolute grid place-items-center w-10 h-10 z-10 bg-(--background-color-card-hero-btn) rounded-md cursor-pointer;
+    &.our-favourites__slider-btn--prev {
+        @apply top-1/2 left-10 translate-y-[-50%];
+    }
+    &.our-favourites__slider-btn--next {
+        @apply top-1/2 right-10 translate-y-[-50%];
+    }
+    .our-favourites__slider-btn-icon {
+        @apply grid place-items-center w-5 h-5;
+        svg {
+            @apply w-full h-full text-white;
+        }
+    }
+}

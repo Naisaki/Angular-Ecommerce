@@ -1,5 +1,4 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 interface Slide {
   src: string;
@@ -10,11 +9,11 @@ interface Slide {
 
 @Component({
   selector: 'app-hero',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './hero.html',
   styleUrl: './hero.css',
 })
-export class Hero implements AfterViewInit {
+export class Hero {
   slides: Slide[] = [
     { src: 'hero-image-1.avif', alt: 'Look 1', title: 'Natural Elegance in Every Detail', description: 'Crafted from solid oak with a smooth finish, timeless and durable.' },
     { src: 'hero-image-2.avif', alt: 'Look 2', title: 'Modern Minimalism, Maximum Comfort', description: 'Simple, sleek, and built for a cozy, stylish lifestyle.' },

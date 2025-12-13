@@ -1,8 +1,13 @@
 @reference "tailwindcss";
 
-.home {
+.home__hero {
     @apply flex flex-col h-[calc(100vh-12px)] w-full py-3 gap-3;
 }
+
+.home__sections {
+    @apply flex flex-col w-full gap-3;
+}
+
 .features {
     @apply flex flex-col h-min w-full;
 }

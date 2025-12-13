@@ -1,0 +1,59 @@
+<article class="product-card">
+  <!-- Imagen -->
+  <div class="product-card__image-wrapper">
+    <div class="product-card__image-background"></div>
+    <img
+      class="product-card__image"
+      [src]="product.imageUrl"
+      [alt]="product.name"
+      loading="lazy"
+    />
+
+    <!-- Badge opcional -->
+    <!-- @if(product.tags && product.tags.length > 0){
+        <span class="product-card__badge">
+            {{ product.tags[0] }}
+        </span>
+    } -->
+  </div>
+
+  <!-- Contenido -->
+  <div class="product-card__content">
+    <!-- <div class="product-card__meta">
+      <span class="product-card__category">
+        {{ product.category }}
+      </span>
+    </div> -->
+
+    <h3 class="product-card__title">
+      {{ product.name }}
+      <svg class="product-card__icon" aria-hidden="true" focusable="false" role="img">
+        <use href="assets/sprite.svg#arrow-forward-rounded"></use>
+      </svg>
+    </h3>
+
+    <!-- <p class="product-card__description">
+      {{ product.description }}
+    </p> -->
+
+    <!-- Footer -->
+    <div class="product-card__footer">
+      <span class="product-card__price">
+        @if(product.discount){
+          $ {{ product.discount }}
+          <span class="product-card__price--old">$ {{ product.price }}</span>
+        } @else {
+          $ {{ product.price }}
+        }
+      </span>
+
+      <button
+        class="product-card__cta"
+        type="button"
+        aria-label="View product"
+      >
+        View
+      </button>
+    </div>
+  </div>
+</article>
