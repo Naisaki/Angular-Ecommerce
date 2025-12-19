@@ -11,3 +11,7 @@
 .features {
     @apply flex flex-col h-min w-full;
 }
+
+/* .collections {
+    @apply flex flex-col h-min w-full;
+} */

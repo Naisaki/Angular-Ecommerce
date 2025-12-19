@@ -31,6 +31,10 @@
     --color-text-feature-bar-icon: #fff;
     --background-color-our-favourites: #f6f6f6;
     --color-text-card-product-discount: #0e101199;
+    --background-color-collections-card: #fff;
+    --background-color-collections-card-variant: #0e1011;
+    --text-color-collections-card: #0e1011;
+    --text-color-collections-card-variant: #fff;
 }
 
 * {
@@ -58,6 +62,10 @@
     --background-color-feature-bar: #fff;
     --color-text-feature-bar-icon: #0e1011;
     --background-color-our-favourites: #181b1c;
+    --background-color-collections-card: #0e1011;
+    --background-color-collections-card-variant: #fff;
+    --text-color-collections-card: #fff;
+    --text-color-collections-card-variant: #0e1011;
 }
 
 body {

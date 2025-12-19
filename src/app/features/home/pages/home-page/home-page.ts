@@ -5,10 +5,11 @@ import { Hero } from '@features/home/components/hero/hero';
 import { FeaturesBar } from '@shared/layout/features-bar/features-bar';
 import { OurFavourites } from '@features/home/components/our-favourites/our-favourites';
 import { Product } from '@features/catalog/models/product';
+import { Collections } from '@features/home/components/collections/collections';
 
 @Component({
   selector: 'app-home-page',
-  imports: [AnnouncementBar, Navbar, Hero, FeaturesBar, OurFavourites],
+  imports: [AnnouncementBar, Navbar, Hero, FeaturesBar, OurFavourites, Collections],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
 })

@@ -1,0 +1,94 @@
+@reference "tailwindcss";
+
+/* ===== Section ===== */
+.collections {
+  @apply relative flex flex-col w-full h-screen items-center py-3 gap-3 overflow-hidden;
+}
+
+.collections__header {
+  @apply relative flex items-center justify-center w-full h-15.5 rounded-xl bg-(--background-color-our-favourites);
+}
+
+.collections__title {
+  @apply text-[1rem] text-(--color-text);
+}
+
+/* ===== Grid Layout ===== */
+.collections__grid {
+  @apply relative grow shrink-0 basis-0 w-full h-px p-0 grid grid-rows-1 grid-cols-[repeat(2,minmax(50px,1fr))] auto-rows-fr justify-center gap-3 overflow-visible;
+}
+
+/* ===== Base Card ===== */
+.collection-card {
+  @apply relative rounded-xl bg-transparent grow shrink-0 basis-0 h-full overflow-hidden;
+  &.collection-card--medium {
+    @apply row-span-1 flex flex-row gap-3;
+  }
+  &.collection-card--large {
+    @apply row-span-2;
+    .collection-card--text {
+      @apply absolute bottom-8 left-8 flex-none gap-2 w-[250px] h-min p-8;
+      place-content: flex-start center;
+    }
+    .collection-card__title {
+      @apply text-[1.75rem];
+    }
+    .collection-card__content {
+      @apply gap-6;
+    }
+  }
+}
+
+.collection-card__image {
+  @apply w-full h-full object-cover;
+}
+
+.collection-card__content {
+  @apply relative flex flex-col flex-none items-start gap-8 w-full h-min p-0 overflow-visible text-inherit;
+  place-content: flex-start;
+}
+
+/* ===== Text-only cards ===== */
+.collection-card--text {
+  @apply relative flex flex-col grow-[.5] shrink-0 basis-0 w-px max-w-[280px] h-full p-10 items-start rounded-[0.625rem] bg-(--background-color-collections-card) text-(--text-color-collections-card) overflow-visible;
+  place-content: flex-start space-between;
+
+  .collection-card__link--underline {
+    @apply bg-(--text-color-collections-card);
+  }
+
+  &.collection-card--text--variant {
+    @apply bg-(--background-color-collections-card-variant) text-(--text-color-collections-card-variant);
+    .collection-card__link--underline {
+      @apply bg-(--text-color-collections-card-variant);
+    }
+  }
+}
+
+/* ===== Typography ===== */
+.collection-card__title {
+  @apply text-[1.5rem] font-normal text-inherit;
+}
+
+.collection-card__description {
+  @apply text-[0.875rem] text-[#9f9fa0] leading-[130%];
+}
+
+/* ===== Link ===== */
+.collection-card__link {
+  @apply relative flex justify-start items-center w-min h-min p-[0_0_2px] text-inherit;
+}
+
+.collection-card__link--text {
+  @apply text-[0.875rem] font-normal text-inherit no-underline text-nowrap leading-[100%];
+}
+
+.collection-card__link--underline {
+  @apply absolute flex-none w-full h-px bottom-0 left-0 bg-black transition-all duration-600 ease-in-out z-1;
+}
+
+.collection-card__link:hover {
+  .collection-card__link--underline {
+    @apply w-[20px];
+  }
+}
