@@ -6,10 +6,12 @@ import { FeaturesBar } from '@shared/layout/features-bar/features-bar';
 import { OurFavourites } from '@features/home/components/our-favourites/our-favourites';
 import { Product } from '@features/catalog/models/product';
 import { Collections } from '@features/home/components/collections/collections';
+import { AboutUs } from '@features/home/components/about-us/about-us';
+import { Footer } from '@shared/layout/footer/footer';
 
 @Component({
   selector: 'app-home-page',
-  imports: [AnnouncementBar, Navbar, Hero, FeaturesBar, OurFavourites, Collections],
+  imports: [AnnouncementBar, Navbar, Hero, FeaturesBar, OurFavourites, Collections, AboutUs, Footer],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
 })
