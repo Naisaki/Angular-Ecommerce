@@ -12,6 +12,6 @@
   }
 
   .announcement-bar__marquee__list li {
-    @apply text-[0.9375rem] text-nowrap text-[var(--color-text-announcement-bar)];
+    @apply text-[0.9375rem] text-nowrap text-[var(--text-color-announcement-bar)];
   }
 }
