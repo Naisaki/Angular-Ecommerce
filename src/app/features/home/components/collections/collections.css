@@ -10,7 +10,7 @@
 }
 
 .collections__title {
-  @apply text-[1rem] text-(--color-text);
+  @apply text-[1rem] text-(--text-color);
 }
 
 /* ===== Grid Layout ===== */
@@ -27,8 +27,7 @@
   &.collection-card--large {
     @apply row-span-2;
     .collection-card--text {
-      @apply absolute bottom-8 left-8 flex-none gap-2 w-[250px] h-min p-8;
-      place-content: flex-start center;
+      @apply absolute bottom-8 left-8 flex-none content-start justify-center gap-2 w-[250px] h-min p-8;
     }
     .collection-card__title {
       @apply text-[1.75rem];
@@ -44,24 +43,14 @@
 }
 
 .collection-card__content {
-  @apply relative flex flex-col flex-none items-start gap-8 w-full h-min p-0 overflow-visible text-inherit;
-  place-content: flex-start;
+  @apply relative flex flex-col flex-none content-start justify-start items-start gap-8 w-full h-min p-0 overflow-visible text-inherit;
 }
 
 /* ===== Text-only cards ===== */
 .collection-card--text {
-  @apply relative flex flex-col grow-[.5] shrink-0 basis-0 w-px max-w-[280px] h-full p-10 items-start rounded-[0.625rem] bg-(--background-color-collections-card) text-(--text-color-collections-card) overflow-visible;
-  place-content: flex-start space-between;
-
-  .collection-card__link--underline {
-    @apply bg-(--text-color-collections-card);
-  }
-
+  @apply relative flex flex-col grow-[.5] shrink-0 basis-0 content-start justify-between w-px max-w-[280px] h-full p-10 items-start rounded-[0.625rem] bg-(--background-color-collections-card) text-(--text-color-collections-card) overflow-visible;
   &.collection-card--text--variant {
     @apply bg-(--background-color-collections-card-variant) text-(--text-color-collections-card-variant);
-    .collection-card__link--underline {
-      @apply bg-(--text-color-collections-card-variant);
-    }
   }
 }
 
@@ -72,23 +61,4 @@
 
 .collection-card__description {
   @apply text-[0.875rem] text-[#9f9fa0] leading-[130%];
-}
-
-/* ===== Link ===== */
-.collection-card__link {
-  @apply relative flex justify-start items-center w-min h-min p-[0_0_2px] text-inherit;
-}
-
-.collection-card__link--text {
-  @apply text-[0.875rem] font-normal text-inherit no-underline text-nowrap leading-[100%];
-}
-
-.collection-card__link--underline {
-  @apply absolute flex-none w-full h-px bottom-0 left-0 bg-black transition-all duration-600 ease-in-out z-1;
-}
-
-.collection-card__link:hover {
-  .collection-card__link--underline {
-    @apply w-[20px];
-  }
 }

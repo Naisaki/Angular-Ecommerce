@@ -22,20 +22,21 @@
           <p class="collection-card__description">
             Our Wood Collection celebrates the natural beauty of wood.
           </p>
-          <a href="#" class="collection-card__link">
-            <span class="collection-card__link--text">View Collection</span>
-            <div class="collection-card__link--underline"></div>
-          </a>
+          <app-button 
+            style="
+              --btn-text-color: var(--text-color-collections-card);
+              --btn-underline-color: var(--text-color-collections-card);
+            " 
+            variant="link" 
+            size="xs" 
+            [underline]="true" 
+            [href]="'#'"
+            [label]="true"
+          >
+            <span btn-label>View Collection</span>
+          </app-button>
         </div>
       </div>
-
-      <!-- <div class="collection-card__content collection-card__content--light">
-        <h3 class="collection-card__title">Wood</h3>
-        <p class="collection-card__description">
-          Our Wood Collection celebrates the natural beauty of wood.
-        </p>
-        <a href="#" class="collection-card__link">View Collection</a>
-      </div> -->
     </article>
 
     <article class="collection-card collection-card--medium">
@@ -53,10 +54,19 @@
           <p class="collection-card__description">
             Refined finishes bring an air of sophistication and drama to any room.
           </p>
-          <a href="#" class="collection-card__link">
-            <span class="collection-card__link--text">View Collection</span>
-            <div class="collection-card__link--underline"></div>
-          </a>
+          <app-button 
+            style="
+              --btn-text-color: var(--text-color-collections-card-variant);
+              --btn-underline-color: var(--text-color-collections-card-variant);
+            " 
+            variant="link" 
+            size="xs" 
+            [underline]="true" 
+            [href]="'#'"
+            [label]="true"
+          >
+            <span btn-label>View Collection</span>
+          </app-button>
         </div>
       </div>
     </article>
@@ -68,10 +78,19 @@
           <p class="collection-card__description">
             The Modern Collection brings together graceful lines and luxurious finishes.
           </p>
-          <a href="#" class="collection-card__link">
-            <span class="collection-card__link--text">View Collection</span>
-            <div class="collection-card__link--underline"></div>
-          </a>
+          <app-button 
+            style="
+              --btn-text-color: var(--text-color-collections-card-variant);
+              --btn-underline-color: var(--text-color-collections-card-variant);
+            " 
+            variant="link" 
+            size="xs" 
+            [underline]="true" 
+            [href]="'#'"
+            [label]="true"
+          >
+            <span btn-label>View Collection</span>
+          </app-button>
         </div>
       </div>
       <div class="collection-card">
