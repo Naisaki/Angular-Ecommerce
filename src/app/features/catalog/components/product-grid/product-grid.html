@@ -1,1 +1,23 @@
-<p>product-grid works!</p>
+<section class="product-grid" aria-label="Product results">
+  @if (isLoading) {
+    <div class="product-grid__state">
+      <p class="product-grid__state-text">Loading products…</p>
+    </div>
+  } @else if (products.length === 0) {
+    <div class="product-grid__state">
+      <p class="product-grid__state-text">No products found.</p>
+      <button type="button" class="product-grid__state-btn" (click)="clearFilters()">
+        Clear filters
+      </button>
+    </div>
+  } @else {
+    <div class="product-grid__list">
+      @for (product of products; track product.id) {
+        <app-product-card
+          class="product-grid__item"
+          [product]="product"
+        />
+      }
+    </div>
+  }
+</section>

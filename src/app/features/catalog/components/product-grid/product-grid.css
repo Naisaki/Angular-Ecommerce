@@ -1,0 +1,15 @@
+.product-grid {
+    position: relative;
+}
+.product-grid__list {
+    display: grid;
+    flex: 0 0 auto;
+    gap: 12px;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(4, minmax(50px, 1fr));
+    height: min-content;
+    justify-content: center;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+}
