@@ -13,9 +13,9 @@
 }
 
 .feature-bar__item-icon-svg {
-    @apply w-full h-full text-(--color-text-feature-bar-icon) fill-(--color-text-feature-bar-icon);
+    @apply w-full h-full text-(--text-color-feature-bar-icon) fill-(--text-color-feature-bar-icon);
 }
 
 .feature-bar__item-label {
-    @apply text-[0.9375rem] text-(--color-text-feature-bar-icon) text-nowrap;
+    @apply text-[0.9375rem] text-(--text-color-feature-bar-icon) text-nowrap;
 }
