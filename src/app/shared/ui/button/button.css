@@ -1,0 +1,97 @@
+@reference "tailwindcss";
+/* =====================
+   Sizes
+===================== */
+/* XS */
+:host{
+    --btn-text-color: black;
+    --btn-underline-color: black;
+    --btn-underline-width: 20px;
+    --btn-underline-duration: 600ms;
+    --btn-background-color: black;
+    --btn-animations-duration: 250ms;
+    --btn-background-color-hover: rgba(0, 0, 0, 0.5);
+    --btn-icon-color: black;
+}
+.btn--xs {
+    --btn-padding: 0 0 2px;
+    --btn-font-size: 0.875rem;
+    --btn-font-weight: 400;
+    --btn-line-height: 100%;
+    --btn-gap: 2px;
+    --btn-border-radius: 6px;
+    --btn-icon-size: 10px;
+}
+
+/* SM */
+.btn--sm {
+    --btn-padding: 10px 12px 10px 14px;
+    --btn-font-size: 0.875rem;
+    --btn-font-weight: 400;
+    --btn-line-height: 100%;
+    --btn-gap: 4px;
+    --btn-border-radius: 6px;
+    --btn-icon-size: 14px;
+}
+
+/* MD (default) */
+.btn--md {
+    --btn-padding: 14px;
+    --btn-font-size: 0.875rem;
+    --btn-font-weight: 400;
+    --btn-line-height: 100%;
+    --btn-gap: 6px;
+    --btn-border-radius: 6px;
+}
+
+/* LG */
+.btn--lg {
+    --btn-padding: 20px;
+    --btn-font-size: 0.9375rem;
+    --btn-font-weight: 400;
+    --btn-line-height: 120%;
+    --btn-gap: 8px;
+    --btn-border-radius: 12px;
+    --btn-icon-size: 18px;
+}
+
+/* XL */
+.btn--xl {
+}
+
+/*Text Link*/
+.btn--link {
+    @apply relative flex justify-start items-center w-min h-min p-(--btn-padding);
+    .btn__label, ::ng-deep [btn-label] {
+        @apply text-(length:--btn-font-size) font-(--btn-font-weight) text-(--btn-text-color) no-underline text-nowrap leading-(--btn-line-height);
+    }
+    .btn__underline {
+        @apply absolute flex-none w-full h-px bottom-0 left-0 bg-(--btn-underline-color) transition-all duration-(--btn-underline-duration) ease-in-out z-1;
+    }
+    &:hover {
+        .btn__underline {
+            @apply w-(--btn-underline-width);
+        }
+    }
+}
+
+/*Text + Icon*/
+.btn--pill {
+    @apply relative flex flex-row items-center justify-between w-full h-min gap-(--btn-gap) p-(--btn-padding) rounded-(--btn-border-radius) bg-(--btn-background-color) transition-all duration-(--btn-animations-duration) ease-in-out;
+    .btn__label, ::ng-deep [btn-label] {
+        @apply text-(--btn-text-color) no-underline text-(length:--btn-font-size) font-(--btn-font-weight) leading-(--btn-line-height);
+    }
+    .btn__icons{
+        @apply relative flex flex-col w-min h-(--btn-icon-size) overflow-hidden;
+        .btn__icon, ::ng-deep [btn-icon] {
+            @apply relative min-w-(--btn-icon-size) min-h-(--btn-icon-size) w-(--btn-icon-size) h-(--btn-icon-size) text-(--btn-icon-color) text-nowrap top-0 transition-all duration-(--btn-animations-duration) ease-in-out;
+        }
+    }
+    &:hover {
+        @apply bg-(--btn-background-color-hover);
+        .btn__icons .btn__icon, .btn__icons ::ng-deep [btn-icon] {
+            @apply -top-full;
+        }
+    }
+}
+

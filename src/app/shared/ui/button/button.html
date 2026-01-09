@@ -1,0 +1,39 @@
+@if (href) {
+  <a
+    class="btn"
+    [class]="btnClass"
+    [attr.href]="href"
+    [attr.aria-label]="ariaLabel || null"
+  >
+    @if (label){
+      <ng-content select="[btn-label]">Texto</ng-content>
+    }
+    @if (hasIcons) {
+      <span class="btn__icons">
+        <ng-content select="[btn-icon]">Iconos</ng-content>
+      </span>
+    }
+    @if (underline) {
+      <span class="btn__underline"></span>
+    }
+  </a>
+} @else {
+  <button
+    class="btn"
+    [class]="btnClass"
+    [attr.type]="type"
+    [disabled]="disabled"
+    [attr.aria-label]="ariaLabel || null"
+  >
+  <!-- (click)="clicked.emit($event)" -->
+    @if (label){
+      <ng-content select="[btn-label]">Texto</ng-content>
+    }
+    @if (hasIcons) {
+      <span class="btn__icons">
+        <ng-content select="[btn-icon]">Iconos</ng-content>
+      </span>
+    }
+  </button>
+}
+
