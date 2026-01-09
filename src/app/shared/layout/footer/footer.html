@@ -1,1 +1,233 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="footer__socials">
+    <app-button 
+      style="
+        --btn-text-color: var(--text-color);
+        --btn-icon-color: var(--text-color);
+        --btn-background-color: var(--background-color-social-pill);
+        --btn-background-color-hover: var(--background-color-social-pill-hover);
+      "
+      class="grow shrink-0 basis-auto"
+      variant="pill" 
+      size="lg" 
+      [underline]="false"
+      [label]="true"
+      [hasIcons]="true"
+      [href]="'#'"
+    >
+      <span btn-label>Twitter</span>
+      <svg btn-icon aria-hidden="true">
+        <use href="assets/sprite.svg#twitter-line"></use>
+      </svg>
+      <svg btn-icon aria-hidden="true">
+        <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+      </svg>
+    </app-button>
+    <app-button 
+      style="
+        --btn-text-color: var(--text-color);
+        --btn-icon-color: var(--text-color);
+        --btn-background-color: var(--background-color-social-pill);
+        --btn-background-color-hover: var(--background-color-social-pill-hover);
+      "
+      class="grow shrink-0 basis-auto"
+      variant="pill" 
+      size="lg" 
+      [underline]="false"
+      [label]="true"
+      [hasIcons]="true"
+      [href]="'#'"
+    >
+      <span btn-label>Instagram</span>
+      <svg btn-icon aria-hidden="true">
+        <use href="assets/sprite.svg#twitter-line"></use>
+      </svg>
+      <svg btn-icon aria-hidden="true">
+        <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+      </svg>
+    </app-button>
+    <app-button 
+      style="
+        --btn-text-color: var(--text-color);
+        --btn-icon-color: var(--text-color);
+        --btn-background-color: var(--background-color-social-pill);
+        --btn-background-color-hover: var(--background-color-social-pill-hover);
+      "
+      class="grow shrink-0 basis-auto"
+      variant="pill" 
+      size="lg" 
+      [underline]="false"
+      [label]="true"
+      [hasIcons]="true"
+      [href]="'#'"
+    >
+      <span btn-label>Pinterest</span>
+      <svg btn-icon aria-hidden="true">
+        <use href="assets/sprite.svg#twitter-line"></use>
+      </svg>
+      <svg btn-icon aria-hidden="true">
+        <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+      </svg>
+    </app-button>
+    <app-button 
+      style="
+        --btn-text-color: var(--text-color);
+        --btn-icon-color: var(--text-color);
+        --btn-background-color: var(--background-color-social-pill);
+        --btn-background-color-hover: var(--background-color-social-pill-hover);
+      "
+      class="grow shrink-0 basis-auto"
+      variant="pill" 
+      size="lg" 
+      [underline]="false"
+      [label]="true"
+      [hasIcons]="true"
+      [href]="'#'"
+    >
+      <span btn-label>Behance</span>
+      <svg btn-icon aria-hidden="true">
+        <use href="assets/sprite.svg#twitter-line"></use>
+      </svg>
+      <svg btn-icon aria-hidden="true">
+        <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+      </svg>
+    </app-button>
+  </div>
+
+  <div class="footer__grid">
+    <section class="footer-card footer-card--main">
+      <div class="footer-card__left">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="footer-brand__dot"></span>
+            <span class="footer-brand__name">
+              <span>Shop</span>
+              <span>Fjord</span>
+            </span>
+          </div>
+
+          <p class="footer-brand__desc">
+            Scandinavian furniture, meticulously handcrafted to bring warmth and
+            elegance into your home.
+          </p>
+        </div>
+        <div class="footer-bottom">
+          <app-button 
+            style="
+              --btn-text-color: var(--color-text-footer-btn);
+              --btn-icon-color: var(--color-text-footer-btn);
+              --btn-background-color: var(--background-color-footer-btn);
+              --btn-background-color-hover: var(--background-color-footer-btn);
+            "
+            class=""
+            variant="pill" 
+            size="sm" 
+            [underline]="false"
+            [label]="true"
+            [hasIcons]="true"
+            [href]="'#'"
+          >
+            <span btn-label>More Templates</span>
+            <svg btn-icon aria-hidden="true">
+              <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+            </svg>
+            <svg btn-icon aria-hidden="true">
+              <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+            </svg>
+          </app-button>
+          <p class="footer-credit">
+            © Made by <a href="#" class="footer-credit__link">Gola Templates</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 class="footer-col__title">Pages</h4>
+          <div class="footer-col__links">
+            <a class="footer-link" href="#">
+              <span>Home</span>
+              <span>Home</span>
+            </a>
+            <a class="footer-link" href="#">
+              <span>About</span>
+              <span>About</span>
+            </a>
+            <a class="footer-link" href="#">
+              <span>Licensing</span>
+              <span>Licensing</span>
+            </a>
+            <a class="footer-link" href="#">
+              <span>404</span>
+              <span>404</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col__title">Help</h4>
+          <div class="footer-col__links">
+            <a class="footer-link" href="#">
+              <span>FAQ</span>
+              <span>FAQ</span>
+            </a>
+            <a class="footer-link" href="#">
+              <span>Contact</span>
+              <span>Contact</span>
+            </a>
+            <a class="footer-link" href="#">
+              <span>Terms</span>
+              <span>Terms</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col__title">CMS</h4>
+          <div class="footer-col__links">
+            <a class="footer-link" href="#">
+              <span>Shop</span>
+              <span>Shop</span>
+            </a>
+            <a class="footer-link" href="#">
+              <span>Shop Product</span>
+              <span>Shop Product</span>
+            </a>
+            <a class="footer-link" href="#">
+              <span>Shop Category</span>
+              <span>Shop Category</span>
+            </a>
+            <a class="footer-link" href="#">
+              <span>Blog</span>
+              <span>Blog</span>
+            </a>
+            <a class="footer-link" href="#">
+              <span>Blog Post</span>
+              <span>Blog Post</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-card footer-card--newsletter">
+      <h3 class="newsletter__title">
+        Join our newsletter<br />
+        and get 20% off your<br />
+        first purchase
+      </h3>
+
+      <form class="newsletter" action="#" method="post">
+        <label class="sr-only" for="newsletterEmail">Email</label>
+        <input
+          id="newsletterEmail"
+          class="newsletter__input"
+          type="email"
+          placeholder="name@email.com"
+          required
+        />
+        <button class="newsletter__button" type="submit">Subscribe</button>
+      </form>
+    </section>
+  </div>
+</footer>
