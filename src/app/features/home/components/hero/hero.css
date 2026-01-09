@@ -57,15 +57,15 @@
 }
 
 .hero__slide__content-title {
-    @apply text-[2rem] text-(--color-text-card-hero-title) text-balance;
+    @apply text-[2rem] text-(--title-color-card-hero) text-balance;
 }
 
 .hero__slide__content-description {
-    @apply text-[1rem] text-(--color-text-card-hero-description) leading-[160%] text-balance;
+    @apply text-[1rem] text-(--description-color-card-hero) leading-[160%] text-balance;
 }
 
 .btn--link {
-    @apply text-(--color-text) text-[0.875rem] border-b border-(--color-text) leading-[100%];
+    @apply text-(--text-color) text-[0.875rem] border-b border-(--text-color) leading-[100%];
 }
 
 

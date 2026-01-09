@@ -39,7 +39,20 @@
                                     <h2 class="hero__slide__content-title">{{slide.title}}</h2>
                                     <p class="hero__slide__content-description">{{slide.description}}</p>
                                 </div>
-                                <button class="btn btn--link">View Product</button>
+                                <!-- <button class="btn btn--link">View Product</button> -->
+                                 <app-button 
+                                    style="
+                                    --btn-text-color: var(--text-color);
+                                    --btn-underline-color: var(--text-color);
+                                    " 
+                                    variant="link" 
+                                    size="xs" 
+                                    [underline]="true" 
+                                    [href]="'#'"
+                                    [label]="true"
+                                >
+                                    <span btn-label>View Product</span>
+                                </app-button>
                             </div>
                         </li>    
                     }

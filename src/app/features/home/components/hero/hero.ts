@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Button } from '@shared/ui/button/button';
 
 interface Slide {
   src: string;
@@ -9,7 +10,7 @@ interface Slide {
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  imports: [Button],
   templateUrl: './hero.html',
   styleUrl: './hero.css',
 })
