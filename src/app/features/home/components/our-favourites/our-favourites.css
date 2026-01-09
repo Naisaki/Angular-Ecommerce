@@ -9,7 +9,7 @@
 }
 
 .our-favourites__title {
-    @apply text-[1rem] text-(--color-text);
+    @apply text-[1rem] text-(--text-color);
 }
 
 .our-favourites__slider {
