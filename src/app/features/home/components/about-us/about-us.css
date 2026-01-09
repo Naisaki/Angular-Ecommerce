@@ -1,0 +1,48 @@
+@reference "tailwindcss";
+/* ===== Section ===== */
+.about-us {
+  @apply relative flex flex-col w-full h-min items-center p-0 gap-3 overflow-hidden;
+}
+
+.about-us__header {
+  @apply relative flex items-center justify-center w-full h-15.5 rounded-xl bg-(--background-color-header);
+}
+
+.about-us__title {
+  @apply text-[1rem] text-(--text-color) font-normal;
+}
+/* ===== Grid ===== */
+.about-us__grid {
+  @apply relative flex flex-row flex-none content-center justify-start items-center gap-3 p-0 w-full h-[600px] overflow-visible;
+}
+
+/* ===== Cards ===== */
+.about-us__card {
+  @apply relative rounded-xl overflow-hidden;
+}
+
+.about-us__card__title {
+  @apply text-[28px] text-(--title-color-card) leading-[120%] font-normal;
+}
+
+/* Text card */
+.about-us__card--text {
+  @apply relative flex flex-col grow-[.4] shrink-0 basis-0 content-start justify-between p-16 w-px max-w-[600px] h-full bg-(--background-color-card) text-(--text-color-card); 
+}
+
+.about-us__card__content {
+  @apply relative flex flex-col flex-none justify-start items-start gap-12 p-0 w-full h-min overflow-visible;
+}
+
+.about-us__card__description {
+  @apply w-full max-w-[350px] text-[15px] leading-[160%] text-(--description-color-card);
+}
+
+.about-us__card--image {
+  @apply flex grow shrink-0 basis-0 gap-0 w-px h-full;
+}
+
+/* Image card */
+.about-us__card--image img {
+  @apply w-full h-full object-cover object-[46.7%_27.9%];
+}

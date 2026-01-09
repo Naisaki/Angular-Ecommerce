@@ -1,1 +1,45 @@
-<p>about-us works!</p>
+<section class="about-us">
+  <!-- Header -->
+  <div class="about-us__header">
+    <h2 class="about-us__title">About Us</h2>
+  </div>
+
+  <!-- Content -->
+  <div class="about-us__grid">
+    <!-- Text card -->
+    <article class="about-us__card about-us__card--text">
+      <h3 class="about-us__card__title">
+        Designing Spaces,<br />
+        Inspiring Connection
+      </h3>
+      <div class="about-us__card__content">
+        <p class="about-us__card__description">
+          At Hanssen, our mission is to create furniture that brings people
+          together, inspired by the simplicity and warmth of Scandinavian design.
+        </p>
+        <app-button 
+          style="
+            --btn-text-color: var(--text-color-card);
+            --btn-underline-color: var(--text-color-card);
+          " 
+          variant="link" 
+          size="xs" 
+          [underline]="true" 
+          [href]="'#'"
+          [label]="true"
+        >
+          <span btn-label>More About Us</span>
+        </app-button>
+      </div>
+    </article>
+
+    <!-- Image card -->
+    <article class="about-us__card about-us__card--image">
+      <img
+        src="about-us.webp"
+        alt="Design team working together"
+        loading="lazy"
+      />
+    </article>
+  </div>
+</section>
