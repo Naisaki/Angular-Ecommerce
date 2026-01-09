@@ -1,6 +1,12 @@
 @reference "tailwindcss";
 .navbar {
-    @apply absolute top-0 left-0 right-0 inline-flex justify-between items-center z-100;
+    @apply inline-flex justify-between items-center w-full;
+}
+.navbar--home:host {
+    @apply absolute top-0 left-0 right-0 z-100;
+}
+.navbar--absolute:host {
+    @apply absolute top-3 left-3 right-3 z-100;
 }
 .navbar__start {
     @apply relative inline-flex items-center px-4 py-1 pb-3 gap-4 rounded-br-[20px] h-min w-min bg-(--background-color);
@@ -23,7 +29,7 @@
     .navbar__logo__label {
         @apply relative flex flex-col items-start h-[1.125rem] overflow-hidden;
         span {
-            @apply relative text-[0.9375rem] text-(--color-text) font-medium -top-full transition-all duration-250 ease-in-out;
+            @apply relative text-[0.9375rem] text-(--text-color) font-medium -top-full transition-all duration-250 ease-in-out;
         }
     }
     &:hover {
@@ -39,15 +45,15 @@
         .navbar__links__text {
             @apply relative flex flex-col w-min h-[1.0625rem] overflow-hidden;
             span {
-                @apply relative text-[0.875rem] text-(--color-text) text-nowrap -top-full transition-all duration-250 ease-in-out;
+                @apply relative text-[0.875rem] text-(--text-color) text-nowrap -top-full transition-all duration-250 ease-in-out;
             }
         }
 
         > span {
-            @apply inline-flex w-3 h-3 text-(--color-text) rotate-0 transition-transform duration-250 ease-in-out;
+            @apply inline-flex w-3 h-3 text-(--text-color) rotate-0 transition-transform duration-250 ease-in-out;
 
             svg {
-                @apply select-none fill-(--color-text);
+                @apply select-none fill-(--text-color);
             }
         }
         &:hover {
@@ -64,7 +70,7 @@
 .navbar__toggle {
     @apply relative inline-flex items-center w-[1.875rem] h-min p-1.5 bg-(--background-color-toggle) rounded-full;
     .navbar__toggle__circle{
-        @apply relative w-2 h-2 rounded-full bg-(--color-text) left-0 transition-all duration-250 ease-in-out;
+        @apply relative w-2 h-2 rounded-full bg-(--text-color) left-0 transition-all duration-250 ease-in-out;
         &.active {
             @apply left-2.5;
         }
@@ -83,15 +89,15 @@
 .navbar__end__search {
     @apply inline-flex items-center cursor-pointer;
     span {
-        @apply w-[0.875rem] h-[0.875rem] text-(--color-text);
+        @apply w-[0.875rem] h-[0.875rem] text-(--text-color);
     }
 }
 .navbar__end__cart {
     @apply inline-flex items-center w-min h-min gap-1 cursor-pointer;
     span {
-        @apply w-4 h-4 text-(--color-text) fill-(--color-text);
+        @apply w-4 h-4 text-(--text-color) fill-(--text-color);
     }
     .navbar__end__cart__count {
-        @apply relative inline-flex items-center justify-center w-min h-min text-[0.875rem] text-nowrap text-(--color-text);
+        @apply relative inline-flex items-center justify-center w-min h-min text-[0.875rem] text-nowrap text-(--text-color);
     }
 }
