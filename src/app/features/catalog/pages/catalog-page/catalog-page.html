@@ -1,1 +1,160 @@
-<p>catalog-page works!</p>
+<app-navbar class="navbar--absolute"></app-navbar>
+<section class="banner">
+    <div class="banner__content">
+        <h1 class="banner__content__title">Dark</h1>
+        <p class="banner__content__description">Rrefined finishes bring an air of sophistication and drama to any room.</p>
+    </div>
+</section>
+<nav class="faceted-nav">
+  <div class="faceted-nav__container">
+    <!-- Reset / Home -->
+    <!-- <button class="faceted-nav__home" aria-label="All products">
+      <div class="faceted-nav__home-icons">
+        <svg class="faceted-nav__home-icon">
+            <use href="assets/sprite.svg#twitter-line"></use>
+        </svg>
+        <svg class="faceted-nav__home-icon" aria-hidden="true" focusable="false" role="img">
+            <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+        </svg>
+      </div>
+    </button> -->
+    <app-button 
+      style="
+        --btn-text-color: var(--text-color);
+        --btn-icon-color: var(--text-color);
+        --btn-background-color: var(--background-color-social-pill);
+        --btn-background-color-hover: var(--background-color-social-pill-hover);
+      "
+      class="grow-0 shrink-0 basis-auto"
+      variant="pill" 
+      size="lg" 
+      [underline]="false"
+      [label]="false"
+      [hasIcons]="true"
+      [href]="'#'"
+    >
+      <svg btn-icon aria-hidden="true">
+        <use href="assets/sprite.svg#twitter-line"></use>
+      </svg>
+      <svg btn-icon aria-hidden="true">
+        <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+      </svg>
+    </app-button>
+
+    <!-- Facets -->
+    <ul class="faceted-nav__facets">
+      <li class="faceted-nav__facet">
+        <!-- <button class="facet-chip facet-chip--active">
+          <span class="facet-chip__label">Dark</span>
+          <div class="facet-chip__icons">
+            <svg class="facet-chip__icon">
+                <use href="assets/sprite.svg#twitter-line"></use>
+            </svg>
+            <svg class="facet-chip__icon" aria-hidden="true" focusable="false" role="img">
+                <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+            </svg>
+          </div>
+        </button> -->
+        <app-button 
+            style="
+                --btn-text-color: var(--text-color);
+                --btn-icon-color: var(--text-color);
+                --btn-background-color: var(--background-color-social-pill);
+                --btn-background-color-hover: var(--background-color-social-pill-hover);
+            "
+            class=""
+            variant="pill" 
+            size="lg" 
+            [underline]="false"
+            [label]="true"
+            [hasIcons]="true"
+            [href]="'#'"
+            >
+                <span btn-label>Dark</span>
+                <svg btn-icon aria-hidden="true">
+                    <use href="assets/sprite.svg#twitter-line"></use>
+                </svg>
+                <svg btn-icon aria-hidden="true">
+                    <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+                </svg>
+        </app-button>
+      </li>
+
+      <li class="faceted-nav__facet">
+        <!-- <button class="facet-chip">
+          <span class="facet-chip__label">Modern</span>
+          <div class="facet-chip__icons">
+            <svg class="facet-chip__icon">
+                <use href="assets/sprite.svg#twitter-line"></use>
+            </svg>
+            <svg class="facet-chip__icon" aria-hidden="true" focusable="false" role="img">
+                <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+            </svg>
+          </div>
+        </button> -->
+        <app-button 
+            style="
+                --btn-text-color: var(--text-color);
+                --btn-icon-color: var(--text-color);
+                --btn-background-color: var(--background-color-social-pill);
+                --btn-background-color-hover: var(--background-color-social-pill-hover);
+            "
+            class=""
+            variant="pill" 
+            size="lg" 
+            [underline]="false"
+            [label]="true"
+            [hasIcons]="true"
+            [href]="'#'"
+            >
+                <span btn-label>Modern</span>
+                <svg btn-icon aria-hidden="true">
+                    <use href="assets/sprite.svg#twitter-line"></use>
+                </svg>
+                <svg btn-icon aria-hidden="true">
+                    <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+                </svg>
+        </app-button>
+      </li>
+
+      <li class="faceted-nav__facet">
+        <!-- <button class="facet-chip">
+          <span class="facet-chip__label">Wood</span>
+          <div class="facet-chip__icons">
+            <svg class="facet-chip__icon">
+                <use href="assets/sprite.svg#twitter-line"></use>
+            </svg>
+            <svg class="facet-chip__icon" aria-hidden="true" focusable="false" role="img">
+                <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+            </svg>
+          </div>
+        </button> -->
+        <app-button 
+            style="
+                --btn-text-color: var(--text-color);
+                --btn-icon-color: var(--text-color);
+                --btn-background-color: var(--background-color-social-pill);
+                --btn-background-color-hover: var(--background-color-social-pill-hover);
+            "
+            class=""
+            variant="pill" 
+            size="lg" 
+            [underline]="false"
+            [label]="true"
+            [hasIcons]="true"
+            [href]="'#'"
+            >
+                <span btn-label>Wood</span>
+                <svg btn-icon aria-hidden="true">
+                    <use href="assets/sprite.svg#twitter-line"></use>
+                </svg>
+                <svg btn-icon aria-hidden="true">
+                    <use href="assets/sprite.svg#arrow-outward-rounded"></use>
+                </svg>
+        </app-button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<app-product-grid [products]="products"></app-product-grid>
+<app-footer></app-footer>

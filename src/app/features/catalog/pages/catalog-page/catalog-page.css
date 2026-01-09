@@ -1,0 +1,68 @@
+@reference "tailwindcss";
+
+.banner {
+    @apply relative pt-24 px-16 pb-16 w-full h-min rounded-xl bg-(--background-color-banner) overflow-visible;
+}
+.banner__content {
+    @apply flex grow-0 shrink-0 basis-auto flex-col content-start justify-start items-start gap-2;
+}
+.banner__content__title {
+    @apply text-(--title-color-banner) text-[40px] leading-[120%] tracking-[0.1rem] font-normal;
+}
+.banner__content__description {
+    @apply max-w-[350px] text-(--description-color-banner) text-[16px] leading-[160%] font-normal;
+}
+
+.faceted-nav {
+    @apply relative overflow-visible;
+}
+
+.faceted-nav__container {
+    @apply relative flex grow-0 shrink-0 basis-auto flex-row content-start justify-start items-center py-3 gap-3 w-full h-min;
+}
+
+.faceted-nav__home {
+  @apply relative flex flex-row grow-0 shrink-0 basis-0 w-min h-auto items-center justify-between p-5 rounded-xl bg-(--background-color-social-pill) text-(--text-color) no-underline text-[0.9375rem] font-normal leading-[120%] transition-all duration-250 ease-in-out;
+  &:hover {
+    @apply bg-(--background-color-social-pill-hover);
+    .faceted-nav__home-icon {
+      @apply -top-full;
+    }
+  }
+}
+
+.faceted-nav__home-icons {
+    @apply relative flex flex-col w-min h-4.5 overflow-hidden;
+    .faceted-nav__home-icon {
+        @apply relative min-w-4.5 min-h-4.5 w-4.5 h-4.5 text-(--text-color) text-nowrap top-0 transition-all duration-250 ease-in-out;
+    }
+}
+
+.faceted-nav__facets {
+    @apply relative flex flex-row grow shrink-0 basis-0 content-start justify-center items-start gap-3 p-0 w-px h-min overflow-visible;
+}
+
+.faceted-nav__facet {
+    @apply relative grow shrink-0 basis-0 w-px h-auto;
+}
+
+.facet-chip {
+    @apply relative flex flex-row w-full h-full items-center justify-between p-5 rounded-xl bg-(--background-color-social-pill) transition-all duration-250 ease-in-out;
+    &:hover {
+        @apply bg-(--background-color-social-pill-hover);
+        .facet-chip__icon {
+            @apply -top-full;
+        }
+    }
+}
+
+.facet-chip__label {
+    @apply text-(--text-color) no-underline text-[0.9375rem] font-normal leading-[120%];
+}
+
+.facet-chip__icons{
+    @apply relative flex flex-col w-min h-4.5 overflow-hidden;
+    .facet-chip__icon {
+        @apply relative min-w-4.5 min-h-4.5 w-4.5 h-4.5 text-(--text-color) text-nowrap top-0 transition-all duration-250 ease-in-out;
+    }
+}
